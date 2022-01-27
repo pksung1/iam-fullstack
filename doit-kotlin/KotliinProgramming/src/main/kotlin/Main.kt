@@ -19,4 +19,10 @@ fun main(args: Array<String>) {
     println(PI)
     val b = 10
     println(b.javaClass)
+    println("fact => ${fact(5)}")
+}
+
+tailrec fun fact(n: Int, v: Int = 1): Int {
+    if (n === 1) return v;
+    return fact(n - 1, n * v)
 }
